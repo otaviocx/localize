@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_localize_empresa</name>
+    <creationDate>2015-11-22</creationDate>
+    <copyright>Copyright (C) 2015. Todos os direitos reservados.</copyright>
+    <license>GNU General Public License versão 2 ou posterior; consulte o arquivo License. txt</license>
+    <author>Victor Bento</author>
+    <authorEmail>vgb.info@gmail.com</authorEmail>
+    <authorUrl>http://victorbento.com.br</authorUrl>
+    <version>1.0.0</version>
+    <description>Parte integrante do componente de recomendação de imóveis.</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>localize_empresa.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_localize_empresa.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_localize_empresa.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_localize_empresa/assets/images/s_com_localize_empresa.png" >COM_LOCALIZE_EMPRESA</menu>
+        <submenu>
+            
+			<menu link="option=com_localize_empresa&amp;view=cadastrodeempresas" view="cadastrodeempresas" img="components/com_localize_empresa/assets/images/s_cadastrodeempresas.png" alt="Localize_empresa/Cadastrodeempresas">COM_LOCALIZE_EMPRESA_TITLE_CADASTRODEEMPRESAS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>localize_empresa.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_localize_empresa.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_localize_empresa.sys.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_localize_empresa.ini</language>
+			<language tag="pt-BR">pt-BR/pt-BR.com_localize_empresa.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="localize_empresa"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

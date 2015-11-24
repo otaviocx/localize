@@ -244,16 +244,15 @@ class PlgUserProfile extends JPlugin
 		$form->loadFile('profile', false);
 
 		$fields = array(
-			'address1',
-			'address2',
-			'city',
-			'region',
-			'country',
-			'postal_code',
-			'phone',
-			'website',
-			'favoritebook',
+			'sexo',
+			'estado',
+			'municipio',
+			'telefone1',
+			'telefone2',
+			'faixa',
+			'cpf',			
 			'aboutme',
+			'preferencias',
 			'dob',
 			'tos',
 		);
@@ -263,16 +262,15 @@ class PlgUserProfile extends JPlugin
 
 		if ($app->isSite() || $name == 'com_users.user' || $name == 'com_admin.profile')
 		{
-			$form->setFieldAttribute('address1', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('address2', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('city', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('region', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('country', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('postal_code', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('phone', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('website', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
-			$form->setFieldAttribute('favoritebook', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('sexo', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('estado', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('municipio', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('telefone1', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('telefone2', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('faixa', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('cpf', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');			
 			$form->setFieldAttribute('aboutme', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
+			$form->setFieldAttribute('preferencias', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
 			$form->setFieldAttribute('dob', 'description', 'PLG_USER_PROFILE_FILL_FIELD_DESC_SITE', 'profile');
 			$form->setFieldAttribute('tos', 'description', 'PLG_USER_PROFILE_FIELD_TOS_DESC_SITE', 'profile');
 		}
