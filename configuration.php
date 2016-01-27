@@ -13,8 +13,8 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'root';
-	public $password = '';
+	public $user = 'localize';
+	public $password = 'localize.imoveis';
 	public $db = 'localize';
 	public $dbprefix = 'qtdpv_';
 	public $live_site = '';
